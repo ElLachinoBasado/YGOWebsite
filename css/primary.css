@@ -4,16 +4,6 @@ body{
     background-color: black;
 }
 
-#githubFooter {
-    font-family: serif;
-    font-size: 3.5vw;
-    position: fixed;
-    color: rgb(20, 55, 255);
-    width: fit-content;
-    bottom: 1%;
-    right: 5%;
-}
-
 .bg-primary {
     background: purple !important;
 }
@@ -29,10 +19,39 @@ body{
     flex-direction: column;
 }
 
+#deckbuildingflex {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+#recommendedflex {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+#cardcombosflex {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
 #homeflex img{
     max-width: 80%;
     height: auto;
 }
+
+#deckbuildingrow img{
+    max-width: 30%;
+    margin: 1%;
+    height: auto;
+}
+
+
 
 /** NavBar pages being hovered over **/
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
@@ -74,12 +93,96 @@ body{
         padding-right: 8%;
     }
 
+    #deckbuildingflex h1{
+        color: yellow;
+        font-size: 5.8vw;
+        padding: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #deckbuildingflex h2 {
+        color: yellow;
+        font-size: 4vw;
+        padding: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #deckbuildingflex p {
+        color: white;
+        font-size: 4vw;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    #deckbuildingrow {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border: 10%;
+    }
+
+    #recommendedflex h1{
+        color: yellow;
+        font-size: 5.8vw;
+        padding: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #recommendedflex h2{
+        color: yellow;
+        font-size: 4vw;
+        padding: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #recommendedflex p {
+        color: white;
+        font-size: 4vw;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    #cardcombosflex h1{
+        color: yellow;
+        font-size: 5.8vw;
+        padding: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #cardcombosflex h2{
+        color: yellow;
+        font-size: 4vw;
+        padding: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #cardcombosflex p {
+        color: white;
+        font-size: 4vw;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
     /** Inactive NavBar pages **/
     .navbar-dark .navbar-nav .nav-link {
         font-family: monospace;
         font-size: 3vw;
         color: hotpink;
     }  
+
+    
+    #githubFooter {
+        font-family: serif;
+        font-size: 3.5vw;
+        position: fixed;
+        color: rgb(20, 55, 255);
+        width: fit-content;
+        bottom: 1%;
+        right: 5%;
+    }
 
 }
 
@@ -90,6 +193,13 @@ body{
         font-size: 7vw;
         color: white;
     }
+
+    #deckbuildingflex h1{
+        color: yellow;
+        font-size: 5.8vw;
+        padding: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
     
     #homeflex h1{
         color: yellow;
@@ -111,6 +221,34 @@ body{
         font-family: Arial, Helvetica, sans-serif;
         padding-left: 8%;
         padding-right: 8%;
+    }
+
+    #deckbuildingflex h1{
+        color: yellow;
+        font-size: 5.8vw;
+        padding: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #deckbuildingflex h2 {
+        color: yellow;
+        font-size: 4vw;
+        padding: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #deckbuildingflex p {
+        color: white;
+        font-size: 4vw;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    #deckbuildingrow {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
     }
 
     /** Inactive NavBar pages **/
@@ -119,47 +257,20 @@ body{
         font-size: 3vw;
         color: hotpink;
     }     
-}
 
-/** Laptop **/
-@media only screen and (min-width: 769px) {
-    .navbar-dark .navbar-brand {
-        font-family:fantasy;
-        font-size: 5vw;
-        color: white;
-        margin-right: 10%;
-    }
-    
-    #homeflex h1{
-        color: yellow;
-        font-size: 5.8vw;
-        padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    #homeflex h2{
-        color: yellow;
-        font-size: 4vw;
-        padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    #homeflex p {
-        color: white;
-        font-size: 4vw;
-        font-family: Arial, Helvetica, sans-serif;
-        padding-left: 8%;
-        padding-right: 8%;
-    }
-    
-    /** Spacing Inbetween Elements **/
-    .navbar-expand-lg .navbar-nav .nav-link {
-        margin-right: 2%;
+    #githubFooter {
+        font-family: serif;
+        font-size: 3.5vw;
+        position: fixed;
+        color: rgb(20, 55, 255);
+        width: fit-content;
+        bottom: 1%;
+        right: 5%;
     }
 }
 
 /** Desktop **/
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 769px) {
     .navbar-dark .navbar-brand {
         font-family:fantasy;
         font-size: 4vw;
@@ -188,6 +299,87 @@ body{
         padding-left: 8%;
         padding-right: 8%;
     }
+
+    #deckbuildingflex h1{
+        color: yellow;
+        font-size: 3vw;
+        padding: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #deckbuildingflex h2 {
+        color: yellow;
+        font-size: 2vw;
+        padding: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #deckbuildingflex p {
+        color: white;
+        font-size: 2vw;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    #deckbuildingrow {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+    }
     
+    #githubFooter {
+        font-family: serif;
+        font-size: 2vw;
+        position: fixed;
+        color: rgb(20, 55, 255);
+        width: fit-content;
+        bottom: 1%;
+        right: 5%;
+    }
+
+    #recommendedflex h1{
+        color: yellow;
+        font-size: 3vw;
+        padding: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #recommendedflex h2{
+        color: yellow;
+        font-size: 2vw;
+        padding: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #recommendedflex p {
+        color: white;
+        font-size: 2vw;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    #cardcombosflex h1{
+        color: yellow;
+        font-size: 3vw;
+        padding: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #cardcombosflex h2{
+        color: yellow;
+        font-size: 2vw;
+        padding: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #cardcombosflex p {
+        color: white;
+        font-size: 2vw;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
 }
 
