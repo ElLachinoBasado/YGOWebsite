@@ -35,9 +35,430 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+        <script> //Populates Main Deck Cyber Dragons         
+            async function populateMainCydra() {
+                await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Cyber%20Dragon|Cyber%20Dragon%20Core|Cyber%20Dragon%20Drei|Cyber%20Dragon%20Herz|Cyber%20Dragon%20Nachster|Cyber%20Dragon%20Vier|Toon%20Cyber%20Dragon')
+                    .then(res => res.json())
+                    .then((data) => {         
+                        console.log(data.data);
+
+                        const element = document.getElementById("ccMainDeckCydra");
+                        
+                        for (let i = 0; i < data.data.length; i++) {
+                            var newImage = document.createElement("img");
+                            newImage.src = data.data[i].card_images[0].image_url;
+                            
+                            var newText = document.createElement("p");
+                            var name = data.data[i].name;
+                            var level = data.data[i].level;
+                            var attribute = data.data[i].attribute;
+                            var race = data.data[i].race;
+                            var type = data.data[i].type;
+                            var atk = data.data[i].atk;
+                            var def = data.data[i].def;
+                            var text = name + " is a level " + level + " " + attribute + " " + race + " " + type + " with " + atk + " attack and " + def + " defense.";
+                            newText.innerText = text;
+
+                            var newCard = document.createElement("div");
+                            newCard.className = "carddata";
+                            newCard.appendChild(newImage);
+                            newCard.appendChild(newText);
+
+                            element.appendChild(newCard);
+                        }
+                    });
+            }
+
+            async function populateMainDeckMonsters() {
+                await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Cyber%20Eltanin|Dinowrestler%20Pankratops|Galaxy%20Soldier|Jizukiru,%20the%20Star%20Destroying%20Kaiju|Psy-Frame%20Driver')
+                    .then(res => res.json())
+                    .then((data) => {         
+                        console.log(data.data);
+
+                        const element = document.getElementById("ccMainDeckMonsters");
+                        
+                        for (let i = 0; i < data.data.length; i++) {
+                            var newImage = document.createElement("img");
+                            newImage.src = data.data[i].card_images[0].image_url;
+                            
+                            var newText = document.createElement("p");
+                            var name = data.data[i].name;
+                            var level = data.data[i].level;
+                            var attribute = data.data[i].attribute;
+                            var race = data.data[i].race;
+                            var type = data.data[i].type;
+                            var atk = data.data[i].atk;
+                            var def = data.data[i].def;
+                            var text = name + " is a level " + level + " " + attribute + " " + race + " " + type + " with " + atk + " attack and " + def + " defense.";
+                            newText.innerText = text;
+
+                            var newCard = document.createElement("div");
+                            newCard.className = "carddata";
+                            newCard.appendChild(newImage);
+                            newCard.appendChild(newText);
+
+                            element.appendChild(newCard);
+                        }
+                    });
+            }
+            async function populateHandTraps() {
+                await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Artifact%20Lancea|D.D.%20Crow|Effect%20Veiler|Maxx%20"C"|Nibiru,%20the%20Primal%20Being|PSY-Framegear%20Gamma|PSY-Framelord%20Omega|Skull%20Meister|Ash%20Blossom%20&%20Joyous%20Spring')
+                    .then(res => res.json())
+                    .then((data) => {         
+                        console.log(data.data);
+
+                        const element = document.getElementById("ccHandTraps");
+                        
+                        for (let i = 0; i < data.data.length; i++) {
+                            var newImage = document.createElement("img");
+                            newImage.src = data.data[i].card_images[0].image_url;
+                            
+                            var newText = document.createElement("p");
+                            var name = data.data[i].name;
+                            var level = data.data[i].level;
+                            var attribute = data.data[i].attribute;
+                            var race = data.data[i].race;
+                            var type = data.data[i].type;
+                            var atk = data.data[i].atk;
+                            var def = data.data[i].def;
+                            var text = name + " is a level " + level + " " + attribute + " " + race + " " + type + " with " + atk + " attack and " + def + " defense.";
+                            newText.innerText = text;
+
+                            var newCard = document.createElement("div");
+                            newCard.className = "carddata";
+                            newCard.appendChild(newImage);
+                            newCard.appendChild(newText);
+
+                            element.appendChild(newCard);
+                        }
+                    });
+            }
+            async function populateCydraSpellsTraps() {
+                await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Cyber%20Emergency|Cyber%20Repair%20Plant|Cyber%20Revsystem|Cyberload%20Fusion|Cybernetic%20Overflow')
+                    .then(res => res.json())
+                    .then((data) => {         
+                        console.log(data.data);
+
+                        const element = document.getElementById("ccCydraSpellsTraps");
+                        
+                        for (let i = 0; i < data.data.length; i++) {
+                            var newImage = document.createElement("img");
+                            newImage.src = data.data[i].card_images[0].image_url;
+                            
+                            var newText = document.createElement("p");
+                            var name = data.data[i].name;  
+                            var race = data.data[i].race;
+                            var type = data.data[i].type;   
+                            text = name + " is a " + race + " " + type + ".";               
+                            newText.innerText = text;
+
+                            var newCard = document.createElement("div");
+                            newCard.className = "carddata";
+                            newCard.appendChild(newImage);
+                            newCard.appendChild(newText);
+                            
+                            element.appendChild(newCard);
+                        }
+                    });
+            }
+            async function populateStapleTraps() {
+                await fetch("https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Compulsory%20Evacuation%20Device|Crackdown|Paleozoic%20Dinomischus|Solemn%20Judgment|Solemn%20Strike|Solemn%20Warning|Torrential%20Tribute|Trap%20Trick|Infinite%20Impermanence|Ice%20Dragon's%20Prison")
+                    .then(res => res.json())
+                    .then((data) => {         
+                        console.log(data.data);
+
+                        const element = document.getElementById("ccStapleTraps");
+                        
+                        for (let i = 0; i < data.data.length; i++) {
+                            var newImage = document.createElement("img");
+                            newImage.src = data.data[i].card_images[0].image_url;
+                            
+                            var newText = document.createElement("p");
+                            var name = data.data[i].name;  
+                            var race = data.data[i].race;
+                            var type = data.data[i].type;   
+                            text = name + " is a " + race + " " + type + ".";               
+                            newText.innerText = text;
+
+                            var newCard = document.createElement("div");
+                            newCard.className = "carddata";
+                            newCard.appendChild(newImage);
+                            newCard.appendChild(newText);
+                            
+                            element.appendChild(newCard);
+                        }
+                    });
+            }
+
+            async function populateBackrowHate() {
+                await fetch("https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Evenly%20Matched|Heavy%20Storm%20Duster|Red%20Reboot|Unending%20Nightmare|Twin%20Twisters|Lightning%20Storm|Mystical%20Space%20Typhoon|Harpie's%20Feather%20Duster|Cosmic%20Cyclone")
+                    .then(res => res.json())
+                    .then((data) => {         
+                        console.log(data.data);
+
+                        const element = document.getElementById("ccBackrowHate");
+                        
+                        for (let i = 0; i < data.data.length; i++) {
+                            var newImage = document.createElement("img");
+                            newImage.src = data.data[i].card_images[0].image_url;
+                            
+                            var newText = document.createElement("p");
+                            var name = data.data[i].name;  
+                            var race = data.data[i].race;
+                            var type = data.data[i].type;   
+                            text = name + " is a " + race + " " + type + ".";               
+                            newText.innerText = text;
+
+                            var newCard = document.createElement("div");
+                            newCard.className = "carddata";
+                            newCard.appendChild(newImage);
+                            newCard.appendChild(newText);
+                            
+                            element.appendChild(newCard);
+                        }
+                    });
+            }
+
+            async function populatePlaymakerSpells() {
+                await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?name=One%20for%20One|Overload%20Fusion|Called%20by%20the%20Grave|Crossout%20Designator|Forbidden%20Chalice|Forbidden%20Dress|Forbidden%20Lance|Instant%20Fusion|Machine%20Duplication|Monster%20Reborn|Super%20Polymerization|Raigeki')
+                    .then(res => res.json())
+                    .then((data) => {         
+                        console.log(data.data);
+
+                        const element = document.getElementById("ccPlaymakerSpells");
+                        
+                        for (let i = 0; i < data.data.length; i++) {
+                            var newImage = document.createElement("img");
+                            newImage.src = data.data[i].card_images[0].image_url;
+                            
+                            var newText = document.createElement("p");
+                            var name = data.data[i].name;  
+                            var race = data.data[i].race;
+                            var type = data.data[i].type;   
+                            text = name + " is a " + race + " " + type + ".";               
+                            newText.innerText = text;
+
+                            var newCard = document.createElement("div");
+                            newCard.className = "carddata";
+                            newCard.appendChild(newImage);
+                            newCard.appendChild(newText);
+                            
+                            element.appendChild(newCard);
+                        }
+                    });
+            }
+
+            async function populateConsistencySpells() {
+                await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Foolish%20Burial|Gold%20Sarcophagus|Pot%20of%20Extravagance|Pot%20of%20Prosperity|Toon%20Table%20of%20Contents|Upstart%20Goblin')
+                    .then(res => res.json())
+                    .then((data) => {         
+                        console.log(data.data);
+
+                        const element = document.getElementById("ccConsistencySpells");
+                        
+                        for (let i = 0; i < data.data.length; i++) {
+                            var newImage = document.createElement("img");
+                            newImage.src = data.data[i].card_images[0].image_url;
+                            
+                            var newText = document.createElement("p");
+                            var name = data.data[i].name;  
+                            var race = data.data[i].race;
+                            var type = data.data[i].type;   
+                            text = name + " is a " + race + " " + type + ".";               
+                            newText.innerText = text;
+
+                            var newCard = document.createElement("div");
+                            newCard.className = "carddata";
+                            newCard.appendChild(newImage);
+                            newCard.appendChild(newText);
+                            
+                            element.appendChild(newCard);
+                        }
+                    });
+            }
+
+            async function populateCydraExtra() {
+                await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Cyber%20Dragon%20Nova|Cyber%20Dragon%20Infinity|Chimeratech%20Fortress%20Dragon|Chimeratech%20Megafleet%20Dragon|Chimeratech%20Rampage%20Dragon|Cyber%20Twin%20Dragon|Cyber%20End%20Dragon|Cyber%20Eternity%20Dragon|Cyber%20Dragon%20Sieger')
+                    .then(res => res.json())
+                    .then((data) => {         
+                        console.log(data.data);
+
+                        const element = document.getElementById("ccCydraExtra");
+                        
+                        for (let i = 0; i < data.data.length; i++) {
+                            var newImage = document.createElement("img");
+                            newImage.src = data.data[i].card_images[0].image_url;
+                            
+                            var newText = document.createElement("p");
+                            var name = data.data[i].name;
+                            var level = data.data[i].level;
+                            var attribute = data.data[i].attribute;
+                            var race = data.data[i].race;
+                            var type = data.data[i].type;
+                            var atk = data.data[i].atk;
+                            var def = data.data[i].def;
+                            var text = name + " is a level " + level + " " + attribute + " " + race + " " + type + " with " + atk + " attack and " + def + " defense.";
+                            newText.innerText = text;
+
+                            var newCard = document.createElement("div");
+                            newCard.className = "carddata";
+                            newCard.appendChild(newImage);
+                            newCard.appendChild(newText);
+
+                            element.appendChild(newCard);
+                        }
+                    });                
+            }
+            async function populateLinkMonsters() {
+                await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Linkuriboh|Lyna%20the%20Light%20Charmer,%20Lustrous|Predaplant%20Verte%20Anaconda|Puzzlomino,%20the%20Drop-n-Deleter|Relinquished%20Anima|Salamangreat%20Almiraj|Geonator%20Transverser')
+                    .then(res => res.json())
+                    .then((data) => {         
+                        console.log(data.data);
+
+                        const element = document.getElementById("ccLinkMonsters");
+                        
+                        for (let i = 0; i < data.data.length; i++) {
+                            var newImage = document.createElement("img");
+                            newImage.src = data.data[i].card_images[0].image_url;
+                            
+                            var newText = document.createElement("p");
+                            var name = data.data[i].name;
+                            var linkval = data.data[i].linkval;
+                            var attribute = data.data[i].attribute;
+                            var race = data.data[i].race;
+                            var type = data.data[i].type;
+                            var atk = data.data[i].atk;
+                            var def = data.data[i].def;
+                            var text = name + " is a rank " + linkval + " " + attribute + " " + race + " " + type + " with " + atk + " attack and " + def + " defense.";
+                            newText.innerText = text;
+
+                            var newCard = document.createElement("div");
+                            newCard.className = "carddata";
+                            newCard.appendChild(newImage);
+                            newCard.appendChild(newText);
+
+                            element.appendChild(newCard);
+                        }
+                    });
+            }
+            async function populateFusionMonsters() {
+                await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Mudragon%20of%20the%20Swamp|Panzer%20Dragon|Predaplant%20Chimerafflesia|Predaplant%20Dragostapelia|Predaplant%20Triphyoverutum|Starving%20Venom%20Fusion%20Dragon')
+                    .then(res => res.json())
+                    .then((data) => {         
+                        console.log(data.data);
+
+                        const element = document.getElementById("ccFusionMonsters");
+                        
+                        for (let i = 0; i < data.data.length; i++) {
+                            var newImage = document.createElement("img");
+                            newImage.src = data.data[i].card_images[0].image_url;
+                            
+                            var newText = document.createElement("p");
+                            var name = data.data[i].name;
+                            var level = data.data[i].level;
+                            var attribute = data.data[i].attribute;
+                            var race = data.data[i].race;
+                            var type = data.data[i].type;
+                            var atk = data.data[i].atk;
+                            var def = data.data[i].def;
+                            var text = name + " is a level " + level + " " + attribute + " " + race + " " + type + " with " + atk + " attack and " + def + " defense.";
+                            newText.innerText = text;
+
+                            var newCard = document.createElement("div");
+                            newCard.className = "carddata";
+                            newCard.appendChild(newImage);
+                            newCard.appendChild(newText);
+
+                            element.appendChild(newCard);
+                        }
+                    });
+            }
+
+            async function populateXYZMonsters() {
+                await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Chronomaly%20Vimana|Infinitrack%20River%20Stormer|Divine%20Arsenal%20AA-ZEUS%20-%20Sky%20Thunder|Drill%20Driver%20Vespenato|Evilswarm%20Exciton%20Knight|Gear%20Gigant%20X|Heavy%20Armored%20Train%20Ironwolf|Wind-Up%20Arsenal%20Zenmaioh|Artifact%20Durendal')
+                    .then(res => res.json())
+                    .then((data) => {         
+                        console.log(data.data);
+
+                        const element = document.getElementById("ccXYZMonsters");
+                        
+                        for (let i = 0; i < data.data.length; i++) {
+                            var newImage = document.createElement("img");
+                            newImage.src = data.data[i].card_images[0].image_url;
+                            
+                            var newText = document.createElement("p");
+                            var name = data.data[i].name;
+                            var level = data.data[i].level;
+                            var attribute = data.data[i].attribute;
+                            var race = data.data[i].race;
+                            var type = data.data[i].type;
+                            var atk = data.data[i].atk;
+                            var def = data.data[i].def;
+                            var text = name + " is a level " + level + " " + attribute + " " + race + " " + type + " with " + atk + " attack and " + def + " defense.";
+                            newText.innerText = text;
+
+                            var newCard = document.createElement("div");
+                            newCard.className = "carddata";
+                            newCard.appendChild(newImage);
+                            newCard.appendChild(newText);
+
+                            element.appendChild(newCard);
+                        }
+                    });
+            }
+
+            populateMainCydra();
+            populateMainDeckMonsters();
+            populateHandTraps();
+            populateCydraSpellsTraps();
+            populateStapleTraps();
+            populateBackrowHate();
+            populatePlaymakerSpells();
+            populateConsistencySpells();
+            populateCydraExtra();
+            populateLinkMonsters();
+            populateFusionMonsters();
+            populateXYZMonsters();
+        </script>
+
         <div id = "recommendedflex">
-            <p>CyDra Monsters: Cyber Dragon, Cyber Dragon Drei, Cyber Dragon Vier, Cyber Dragon Core, Cyber Dragon Herz, Cyber Dragon Nachster</p>
-            <p>CyDra Spells / Traps: Cyber Emergency, Cyber Repair Plant, Cyber Revsystem, Cyberload Fusion, Cyber Revolution, Cybernetic Overflow</p>
+            <h1>Cards to Consider</h1>
+            <div class = "cardcategory" id = "ccMainDeckCydra">
+                <h2>Main Deck Cyber Dragons</h2>
+            </div>
+            <div class = "cardcategory" id = "ccMainDeckMonsters">
+                <h2>Other Main Deck Monsters</h2>
+            </div>
+            <div class = "cardcategory" id = "ccHandTraps">
+                <h2>Hand Traps</h2>
+            </div>
+            <div class = "cardcategory" id = "ccCydraSpellsTraps">
+                <h2>Cyber Spells / Traps</h2>
+            </div>
+            <div class = "cardcategory" id = "ccStapleTraps">
+                <h2>Staple Traps</h2>
+            </div>
+            <div class = "cardcategory" id = "ccBackrowHate">
+                <h2>Backrow Hate</h2>
+            </div>
+            <div class = "cardcategory" id = "ccPlaymakerSpells">
+                <h2>Playmaker Spells</h2>
+            </div>
+            <div class = "cardcategory" id = "ccConsistencySpells">
+                <h2>Consistency Spells</h2>
+            </div>
+            <div class = "cardcategory" id = "ccCydraExtra">
+                <h2>Cyber Dragon Extra Deck</h2>
+            </div>
+            <div class = "cardcategory" id = "ccLinkMonsters">
+                <h2>Link Monsters</h2>
+            </div>
+            <div class = "cardcategory" id = "ccFusionMonsters">
+                <h2>Fusion Monsters</h2>
+            </div>
+            <div class = "cardcategory" id = "ccXYZMonsters">
+                <h2>XYZ Monsters</h2>
+            </div>
         </div>
     </body>
     <footer> 

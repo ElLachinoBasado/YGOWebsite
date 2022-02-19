@@ -26,6 +26,42 @@ body{
     flex-direction: column;
 }
 
+.fusion {
+    color: blueviolet;
+}
+
+.trap {
+    color: violet;
+}
+
+/** Recommended page boxes **/
+.cardcategory {
+    align-self: flex-start;
+    border-radius: 1%;
+    border: solid grey 2px;
+    margin-left: 5%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardcategory h2 {
+    align-self: flex-start;
+}
+
+.carddata {
+    margin-left: 3%;
+    margin-bottom: 1%;
+    display:flex;
+    flex-direction: row;
+}
+
+/** Cyber Dragon Drawn Fanart **/
+#deckbuildingflex img { 
+    max-width: 80%;
+    margin-bottom: 2%;
+}
+
 #recommendedflex {
     display: flex;
     max-width: 100%;
@@ -53,6 +89,7 @@ body{
 
 
 
+
 /** NavBar pages being hovered over **/
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
     color: yellow;
@@ -65,6 +102,10 @@ body{
 
 /** Mobile **/
 @media only screen and (max-width: 425px) {
+    .carddata img {
+        width: 20%;
+    }
+
     .navbar-dark .navbar-brand {
         font-family:fantasy;
         font-size: 7vw;
@@ -74,21 +115,21 @@ body{
     #homeflex h1{
         color: yellow;
         font-size: 5.8vw;
-        padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+
+        font-family: fantasy;
     }
 
     #homeflex h2{
         color: yellow;
         font-size: 4vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: fantasy;
     }
     
     #homeflex p {
         color: white;
         font-size: 4vw;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: fantasy;
         padding-left: 8%;
         padding-right: 8%;
     }
@@ -97,20 +138,20 @@ body{
         color: yellow;
         font-size: 5.8vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: fantasy;
     }
 
     #deckbuildingflex h2 {
         color: yellow;
         font-size: 4vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: fantasy;
     }
 
     #deckbuildingflex p {
         color: white;
         font-size: 4vw;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: fantasy;
         padding-left: 8%;
         padding-right: 8%;
     }
@@ -126,20 +167,20 @@ body{
         color: yellow;
         font-size: 5.8vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: fantasy;
     }
 
     #recommendedflex h2{
         color: yellow;
         font-size: 4vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: fantasy;
     }
     
     #recommendedflex p {
         color: white;
         font-size: 4vw;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: fantasy;
         padding-left: 8%;
         padding-right: 8%;
     }
@@ -148,27 +189,27 @@ body{
         color: yellow;
         font-size: 5.8vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
     }
 
     #cardcombosflex h2{
         color: yellow;
         font-size: 4vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
     }
     
     #cardcombosflex p {
         color: white;
         font-size: 4vw;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
         padding-left: 8%;
         padding-right: 8%;
     }
 
     /** Inactive NavBar pages **/
     .navbar-dark .navbar-nav .nav-link {
-        font-family: monospace;
+        font-family:fantasy;
         font-size: 3vw;
         color: hotpink;
     }  
@@ -181,7 +222,6 @@ body{
         color: rgb(20, 55, 255);
         width: fit-content;
         bottom: 1%;
-        right: 5%;
     }
 
 }
@@ -198,27 +238,27 @@ body{
         color: yellow;
         font-size: 5.8vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
     }
     
     #homeflex h1{
         color: yellow;
         font-size: 5.8vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
     }
 
     #homeflex h2{
         color: yellow;
         font-size: 4vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
     }
     
     #homeflex p {
         color: white;
         font-size: 4vw;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
         padding-left: 8%;
         padding-right: 8%;
     }
@@ -227,20 +267,20 @@ body{
         color: yellow;
         font-size: 5.8vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
     }
 
     #deckbuildingflex h2 {
         color: yellow;
         font-size: 4vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
     }
 
     #deckbuildingflex p {
         color: white;
         font-size: 4vw;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
         padding-left: 8%;
         padding-right: 8%;
     }
@@ -253,13 +293,13 @@ body{
 
     /** Inactive NavBar pages **/
     .navbar-dark .navbar-nav .nav-link {
-        font-family: monospace;
+        font-family:fantasy;
         font-size: 3vw;
         color: hotpink;
     }     
 
     #githubFooter {
-        font-family: serif;
+        font-family:fantasy;
         font-size: 3.5vw;
         position: fixed;
         color: rgb(20, 55, 255);
@@ -282,20 +322,20 @@ body{
         color: yellow;
         font-size: 3vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
     }
 
     #homeflex h2{
         color: yellow;
         font-size: 2vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
     }
     
     #homeflex p {
         color: white;
         font-size: 2vw;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
         padding-left: 8%;
         padding-right: 8%;
     }
@@ -304,20 +344,20 @@ body{
         color: yellow;
         font-size: 3vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
     }
 
     #deckbuildingflex h2 {
         color: yellow;
         font-size: 2vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
     }
 
     #deckbuildingflex p {
         color: white;
         font-size: 2vw;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
         padding-left: 8%;
         padding-right: 8%;
     }
@@ -342,20 +382,20 @@ body{
         color: yellow;
         font-size: 3vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
     }
 
     #recommendedflex h2{
         color: yellow;
         font-size: 2vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
     }
     
     #recommendedflex p {
         color: white;
         font-size: 2vw;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
         padding-left: 8%;
         padding-right: 8%;
     }
@@ -364,20 +404,20 @@ body{
         color: yellow;
         font-size: 3vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
     }
 
     #cardcombosflex h2{
         color: yellow;
         font-size: 2vw;
         padding: 5%;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
     }
     
     #cardcombosflex p {
         color: white;
         font-size: 2vw;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family:fantasy;
         padding-left: 8%;
         padding-right: 8%;
     }
